@@ -3,16 +3,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<title>Todo List</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
 	<body>
-		<div>			   
-			<form th:object="${todo}" action="#" th:action="@{'/edit/{id}' (id=${todo.id})}" th:method="post">
+		<div >			   
+		 	<form action="#" th:action="@{'/edit/{id}' (id=${id})}" th:method="post">  
 				<h1>Edit Todo</h1>
-				<input placeholder="Add task Name here"  th:field="${todo.task}" name="task"/>
+				<input placeholder="Add task Name here" th:field="${todo.task}" name="task"/>
 				<button type="submit">Submit</button>
 			</form>
 		</div>
-		
-		
 	</body>
 </html>
